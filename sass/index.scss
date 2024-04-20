@@ -41,29 +41,76 @@ body {
     animation: gradientAnimation 10s ease infinite;
 }
 
-
-
 /*  container styles */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+
+    /* Content styles */
+    .content {
+        margin-top: 40px;
+        text-align: center;
+
+        /* Logo*/
+        .logo {
+            margin-bottom: 80px;
+
+            img {
+                width: 150px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.1, 1.1) rotate(360deg);
+
+                }
+            }
+        }
+
+        /* Links */
+        .links {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            li {
+                margin: 10px;
+                a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    color: #fff;
+                    text-decoration: none;
+                    border: 2px solid #fff;
+                    border-radius: 100px;
+                    width: 100px;
+                    transition: transform 0.3s;
+                    &:hover {
+                        background-color: #fff;
+                        color: #007bff;
+                        transform: scale(1.1, 1.1);
+                    }
+                }
+            }
+        }
+        /* 欢迎词 */
+        p {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s;
+            animation: shake 0.5s ease infinite;
+            /* 添加动画效果 */
+        }
+    }
+
 }
 
-/* Content styles */
-.content {
-    margin-top: 40px;
-    text-align: center;
-    /* 欢迎词 */
-    p {
-        margin-top: 50px;
-        font-size: 24px;
-        color: #fff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        transition: transform 0.3s;
-        animation: shake 0.5s ease infinite; /* 添加动画效果 */
-    }
-}
 /* 欢迎词的摇晃动画 */
 @keyframes shake {
     0% {
@@ -87,52 +134,6 @@ body {
     }
 }
 
-/* Logo*/
-.logo {
-    margin-bottom: 80px;
-}
-
-.logo img {
-    width: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.logo img:hover {
-    transform: scale(1.1, 1.1) rotate(360deg);
-}
-
-/* Links */
-.links ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.links li {
-    margin: 10px;
-}
-
-.links a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    border-radius: 100px;
-    width: 100px;
-    transition: transform 0.3s;
-}
-
-.links a:hover {
-    background-color: #fff;
-    color: #007bff;
-    transform: scale(1.1, 1.1);
-}
-
 /* Footer  */
 footer {
     position: fixed;
@@ -142,12 +143,10 @@ footer {
     text-align: center;
     margin-top: 50px;
     color: #fff;
-}
-
-footer a {
-    color: inherit;
-}
-
-footer a:hover {
-    color: #007bff;
+    a {
+        color: inherit;
+        &:hover {
+            color: #007bff;
+        }
+    }
 }
