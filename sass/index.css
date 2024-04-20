@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/*清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+/* 背景的渐变色动画 */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  font: lighter 16px "宋体";
+  background: linear-gradient(-45deg, #008cff, #ff00ff, #ff0000, #ffcc00, #00ff00, #008cff, #ff00ff) no-repeat;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/*  container styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Content styles */
+.content {
+  margin-top: 40px;
+  text-align: center;
+  /* 欢迎词 */
+}
+
+.content p {
+  margin-top: 50px;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s;
+  animation: shake 0.5s ease infinite;
+  /* 添加动画效果 */
+}
+
+/* 欢迎词的摇晃动画 */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Logo*/
+.logo {
+  margin-bottom: 80px;
+}
+
+.logo img {
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.1, 1.1) rotate(360deg);
+}
+
+/* Links */
+.links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.links li {
+  margin: 10px;
+}
+
+.links a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  width: 100px;
+  transition: transform 0.3s;
+}
+
+.links a:hover {
+  background-color: #fff;
+  color: #007bff;
+  transform: scale(1.1, 1.1);
+}
+
+/* Footer  */
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer a:hover {
+  color: #007bff;
+}
